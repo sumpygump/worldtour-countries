@@ -1,0 +1,14 @@
+{
+  "name": "worldtour-countries",
+  "version": "1.0.0",
+  "description": "Assets for geography flash cards",
+  "scripts": {
+    "build": ""
+  },
+  "license": "MIT",
+  "dependencies": {
+    "handlebars": "^4.0.11",
+    "pn": "^1.0.0",
+    "svg2png": "^4.1.1"
+  }
+}
