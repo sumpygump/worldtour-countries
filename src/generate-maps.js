@@ -4,7 +4,8 @@ const pnfs = require("pn/fs");
 const svg2png = require("svg2png");
 
 const MAP_TEMPLATE = 'maps/templates/_map-world-template.svg';
-const DEST_DIR = 'maps/';
+const DEST_DIR_SVG = 'maps/';
+const DEST_DIR_PNG = '../media/maps/';
 
 const mapdata = require("./map-data.json");
  
@@ -40,13 +41,14 @@ var default_context = {
 };
 
 function renderMap (country) {
-    var dest_svg_filename = DEST_DIR + 'world-' + country.name + '-map.svg';
-    var dest_png_filename = DEST_DIR + 'world-' + country.name + '-map.png';
+    var dest_svg_filename = DEST_DIR_SVG + 'world-' + country.name + '-map.svg';
+    var dest_png_filename = DEST_DIR_PNG + 'world-' + country.name + '-map.png';
 
     // If the png already exists, skip
     if (fs.existsSync(dest_png_filename)) {
         return;
     }
+    process.stdout.write(" - " + country.name + "...");
 
     var template = Handlebars.compile(source);
     // Doing it this way to get fresh context obj each pass.
@@ -101,18 +103,34 @@ function renderMap (country) {
         context.overrideCss += css;
     }
 
+    process.stdout.write('.');
+
     // Generate the SVG with context updates
     var generated = template(context);
+    process.stdout.write('.');
 
     fs.writeFileSync(dest_svg_filename, generated);
+    process.stdout.write('.');
 
-    pnfs.readFile(dest_svg_filename)
-        .then(svg2png)
-        .then(buffer => pnfs.writeFile(dest_png_filename, buffer))
-        .then(console.log(country.name))
-        .catch(e => console.error(e));
+    var input = fs.readFileSync(dest_svg_filename);
+    var output = svg2png.sync(input);
+    process.stdout.write('.');
+    fs.writeFileSync(dest_png_filename, output);
+    process.stdout.write('.');
+    console.log('done!');
 }
 
+// First get a count of how many we need to generate
+var count = 0;
+for (var country of mapdata.countries) {
+    var dest_png_filename = DEST_DIR_PNG + 'world-' + country.name + '-map.png';
+    if (!fs.existsSync(dest_png_filename)) {
+        count++;
+    }
+}
+console.log(count + " maps to generate.");
+
+// Generate them!
 for (var country of mapdata.countries) {
     renderMap(country);
 }
