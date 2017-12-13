@@ -3,30 +3,23 @@
   <title>World Map</title>
   <style id="style_css_sheet" type="text/css"> 
 /*
- * Below are Cascading Style Sheet (CSS) definitions in use in this file,
- * which allow easily changing how countries are displayed.
- *
- */
-
-/*
  * Circles around small countries
- *
- * Change opacity to 1 to display all circles.
- *
  */
 .circlexx
 {
    opacity:0;
    fill:#e0e0e0;
    stroke:#000000;
-   stroke-width:0.5;
+   stroke-width: 1;
+}
+
+.circleww
+{
+   stroke-width: 1;
 }
 
 /*
  * Smaller circles around French DOMs and Chinese SARs
- *
- * Change opacity to 1 to display all subnational circles.
- *
  */
 .subxx
 {
@@ -37,9 +30,6 @@
 
 /*
  * Circles around small countries, but with no permanent residents 
- *
- * Change opacity to 1 to display all circles.
- *
  */
 .noxx
 {
@@ -66,11 +56,10 @@
 .coastxx
 {
    fill: #e0e0e0;
-   stroke:#ffffff;
-   stroke-width:0.3;
+   stroke :#ffffff;
+   stroke-width:0.2;
    fill-rule:evenodd;
 }
-
 
 /*
  * Styles for territories with limited or no recognition
@@ -85,9 +74,6 @@
 
 /*
  * Circles around small territories with limited or no recognition
- *
- * Change opacity to 1 to display all circles.
- *
  */
 .unxx
 {
@@ -96,7 +82,6 @@
    stroke:#000000;
    stroke-width:0.3;
 }
-
 
 /*
  * Styles for territories without permanent population.
@@ -116,7 +101,7 @@
 {
    opacity: 0;
    color: #000000;
-   fill:#ffffff;
+   fill: #ffffff;
    stroke:#000;
    stroke-width:0.5;
    stroke-miterlimit:1;
@@ -127,58 +112,58 @@
 .er, .dj, .ga, .gm, .gh, .gn, .ci, .ke, .ls, .lr, .ly, .mg, .mw, .ml, .mr,
 .mu, .ma, .mz, .na, .ne, .ng, .gw, .re, .rw, .sh, .st, .sn, .sc, .sl, .so,
 .za, .zw, .ss, .eh, .sd, .sz, .tg, .tn, .ug, .eg, .tz, .bf, .zm
-{ fill: #706f6f; }
+{ fill: {{ region_fills.africa }}; }
 
 /* Antarctica */
 .aq, .bv, .gs, .tf, .hm
-{ fill: #706f6f; }
+{ fill: #e0e0e0; }
 
 /* Asia */
 .ae, .af, .bd, .bh, .bn, .bt, .cc, .cn, .cx, .cy, .hk, .id, .il, .in, .io, .iq,
 .ir, .jo, .jp, .kg, .kh, .kp, .kr, .kw, .kz, .la, .lb, .lk, .mm, .mn, .mo, .mv,
 .my, .np, .om, .ph, .pk, .ps, .qa, .sa, .sg, .sy, .th, .tj, .tl, .tm, .tw, .uz,
 .vn, .xe, .ye
-{ fill: #706f6f; }
+{ fill: {{ region_fills.asia }}; }
 
 /* Asia: East */
 .bd, .bn, .bt, .cc, .cn, .cx, .hk, .id, .in, .io, .jp, .kh, .kp, .kr, .la, .lk,
 .mm, .mn, .mo, .mv, .my, .np, .ph, .sg, .th, .tl, .tw, .vn
-{ fill: #706f6f; }
+{ fill: {{ region_fills.east_asia }}; }
 
 /* Asia: Middle East (West Asia) */
 .ae, .af, .bh, .cy, .il, .iq, .ir, .jo, .kg, .kw, .kz, .lb, .om, .pk, .ps, .qa,
 .sa, .sy, .tj, .tm, .uz, .xe, .ye
-{ fill: #706f6f; }
+{ fill: {{ region_fills.west_asia }}; }
 
 /* Russia */
 .ru
-{ fill: #706f6f; }
+{ fill: {{ region_fills.russia }}; }
 
 /* Europe */
 .ad, .al, .am, .at, .ax, .az, .ba, .be, .bg, .by, .ch, .cy, .cz, .de, .dk, .ee,
 .es, .fi, .fo, .frx, .gb, .ge, .gg, .gi, .gr, .hr, .hu, .ie, .im, .is, .it, .je,
 .li, .lt, .lu, .lv, .mc, .md, .me, .mk, .mt, .nl, .no, .pl, .pt, .ro, .rs, .se,
 .si, .sj, .sk, .sm, .tr, .ua, .va
-{ fill: #706f6f; }
+{ fill: {{ region_fills.europe }}; }
 
 /* North America */
 .ca, .gl, .um, .us
-{ fill: #706f6f; }
+{ fill: {{ region_fills.north_america }}; }
 
 /* Central America */
 .ag, .ai, .an, .aw, .bb, .bl, .bm, .bq, .bs, .bz, .cr, .cu, .cw, .dm, .do, .gd,
 .gp, .gt, .hn, .ht, .jm, .kn, .ky, .lc, .mf, .mq, .ms, .mx, .ni, .pa, .pm, .pr,
 .sv, .sx, .tc, .tt, .vc, .vg, .vi
-{ fill: #706f6f; }
+{ fill: {{ region_fills.central_america }}; }
 
 /* Oceania */
 .as, .au, .ck, .fj, .fm, .gu, .ki, .mh, .mp, .nc, .nf, .nr, .nu, .nz, .pf, .pg,
 .pn, .pw, .sb, .tk, .to, .tv, .um, .vu, .wf, .ws, .xx
-{ fill: #706f6f; }
+{ fill: {{ region_fills.oceania }}; }
 
 /* South America */
 .ar, .bo, .br, .cl, .co, .ec, .fk, .gf, .gy, .pe, .py, .sr, .uy, .ve
-{ fill: #706f6f; }
+{ fill: {{ region_fills.south_america }}; }
 
 {{ overrideCss }}
   </style>
@@ -1078,9 +1063,10 @@
   </path>
   <g id="fi" class="landxx coastxx fi eu">
     <title>Finland</title>
-    <path id="path4630" d="m 1405.49,244.58 c -0.57,0.634 -0.57,0.765 0.29,0.936 0,-0.339 -0.11,-0.651 -0.29,-0.936"/>
-    <path id="path4632" d="m 1407.22,246.09 c 0.97,0.159 1.03,-0.773 0.58,-1.368 0.47,-0.13 1.02,0.845 1.53,0.6 1.03,-0.497 -2.09,-1.558 -2.61,-1.463 0.52,0.428 0.54,1.035 0.1,1.512 0,-0.591 -0.4,-0.958 -1.01,-0.721 0.24,0.66 0.47,1.718 1.44,1.44"/>
-    <path id="path4634" d="m 1407.94,246.45 c 2.67,1.023 0.91,-0.811 0,0"/>
+    <path id="path4630" class="ax" d="m 1405.49,244.58 c -0.57,0.634 -0.57,0.765 0.29,0.936 0,-0.339 -0.11,-0.651 -0.29,-0.936"/>
+    <path id="path4632" class="ax" d="m 1407.22,246.09 c 0.97,0.159 1.03,-0.773 0.58,-1.368 0.47,-0.13 1.02,0.845 1.53,0.6 1.03,-0.497 -2.09,-1.558 -2.61,-1.463 0.52,0.428 0.54,1.035 0.1,1.512 0,-0.591 -0.4,-0.958 -1.01,-0.721 0.24,0.66 0.47,1.718 1.44,1.44"/>
+    <path id="path4634" class="ax" d="m 1407.94,246.45 c 2.67,1.023 0.91,-0.811 0,0"/>
+    <circle id="ax_" class="circlexx subxx ax" r="4.2338" cy="245" cx="1407.5"/>
     <path id="path4636" d="m 1409.96,246.96 c 0.26,0.127 0.53,0.127 0.79,0 -0.27,0 -0.53,0 -0.79,0"/>
     <path id="path4638" d="m 1413.63,222.19 c 1.48,-0.173 0.41,-1.593 -0.72,-0.647 0.21,0.242 0.45,0.458 0.72,0.647"/>
     <path id="path4642" d="m 1416.01,242.71 c 0.26,-0.02 0.53,-0.05 0.79,-0.07 -0.55,-0.491 -0.81,-0.467 -0.79,0.07"/>
@@ -3038,7 +3024,7 @@
       <path id="path6116" d="m 805.656,612.575 c -0.94,0.04 -1.243,-1.335 -0.21,-1.441 0.927,-0.1 0.575,1.051 0.21,1.441"/>
       <path id="path6118" d="m 806.096,607.822 c -0.578,-0.111 -0.923,-0.563 -0.87,-1.151 0.839,-0.296 1.103,0.496 0.87,1.151"/>
     </g>
-    <circle id="ag_" class="circlexx ag" r="6.01303" cy="604.909" cx="810.745"/>
+    <circle id="ag_" class="circlexx ag" r="6.01303" cy="609.2" cx="805.745"/>
   </g>
   <g id="bb">
     <title>Barbados</title>
@@ -3078,6 +3064,10 @@
     <title>Maldives</title>
     <path id="mv-" class="landxx coastxx mv" d="m 1785.09,736.359 c 0.1,-0.7 -0.19,-1.573 -1.08,-1.37 0.53,0.28 0.95,0.774 1.08,1.37"/>
     <circle id="mv_" class="circlexx mv" r="6.01303" cy="730.374" cx="1784.22"/>
+  </g>
+  <g id="io">
+    <title>British Indian Ocean Territory</title>
+    <circle id="io_" class="circlexx circleww io" r="6.01303" cy="765.100" cx="1802"/>
   </g>
   <g id="ky">
     <title>Cayman Islands</title>
@@ -3128,7 +3118,7 @@
   <g id="as">
     <title>American Samoa</title>
     <path id="as-" class="landxx coastxx as" d="m 2704.37,883.939 c 0.33,-0.336 0.67,-0.673 1.01,-1.01 -0.55,0.07 -0.94,0.466 -1.01,1.01"/>
-    <circle id="as_" class="circlexx as" r="6.01303" cy="886.994" cx="2702.58"/>
+    <circle id="as_" class="circlexx as" r="6.01303" cy="883.494" cx="2705.48"/>
   </g>
   <g id="mh" class="landxx coastxx mh">
     <title>Marshall Islands</title>
@@ -3138,7 +3128,7 @@
   <g id="aw">
     <title>Aruba</title>
     <path id="aw-" class="landxx coastxx aw" d="m 739.776,651.526 c -0.12,-0.24 -0.24,-0.479 -0.36,-0.72 0.795,-0.313 1.129,0.837 1.229,1.368 -0.315,-0.182 -0.605,-0.398 -0.869,-0.648"/>
-    <circle id="aw_" class="circlexx aw" r="6.01303" cy="647.107" cx="737.109"/>
+    <circle id="aw_" class="circlexx aw" r="6.01303" cy="649.107" cx="739.109"/>
   </g>
   <g id="li">
     <title>Liechtenstein</title>
@@ -3166,7 +3156,7 @@
   <g id="ai">
     <title>Anguilla</title>
     <path id="ai-" class="landxx coastxx ai" d="m 795.866,602.422 c 0.461,-0.342 0.941,-0.654 1.44,-0.937 -0.331,0.489 -0.849,0.854 -1.44,0.937"/>
-    <circle id="ai_" class="circlexx ai" r="6.01303" cy="592.17" cx="790.604"/>
+    <circle id="ai_" class="circlexx ai" r="6.01303" cy="602.17" cx="796.604"/>
   </g>
   <g id="mf">
     <title>Saint Martin (French Part)</title>
@@ -3186,7 +3176,7 @@
   <g id="bm">
     <title>Bermuda</title>
     <path id="bm-" class="landxx coastxx bm" d="m 802.056,480.454 c 0.25,-0.174 0.517,-0.318 0.8,-0.433 -0.267,0.145 -0.534,0.289 -0.8,0.433"/>
-    <circle id="bm_" class="circlexx bm" r="6.01303" cy="478.566" cx="801.674"/>
+    <circle id="bm_" class="circlexx bm" r="6.01303" cy="480.566" cx="802.674"/>
   </g>
   <g id="tv">
     <title>Tuvalu</title>
