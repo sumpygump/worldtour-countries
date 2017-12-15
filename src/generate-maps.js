@@ -14,6 +14,7 @@ var source = fs.readFileSync(MAP_TEMPLATE, 'utf8');
 const COLOR_GREY = '#d2d2d2';
 const COLOR_DARK_GREY = '#706f6f';
 const COLOR_PINK = '#e22781';
+const COLOR_YELLOW = '#fbc90d';
 
 // prepend with id (e.g. '#ai .landxx { ... }')
 const CSS_CIRCLE_LAND = ' .landxx { fill: #e22781; stroke-width: 1px; stroke: #e22781; }';
@@ -54,11 +55,6 @@ function renderMap (country) {
     // Doing it this way to get fresh context obj each pass.
     var context = JSON.parse(JSON.stringify(default_context));
 
-    // Set viewBox dims if exist
-    if (country.viewBox) {
-        context.viewBox = country.viewBox;
-    }
-
     // Set the viewBox from the defined region if exists
     if (country.vbregion) {
         context.viewBox = mapdata.regions[country.vbregion].viewBox;
@@ -94,6 +90,11 @@ function renderMap (country) {
         if (mapdata.regions[country.in].height) {
             context.height = mapdata.regions[country.in].height;
         }
+    }
+
+    // Set viewBox dims if exist
+    if (country.viewBox) {
+        context.viewBox = country.viewBox;
     }
 
     // If we need to circle the country, do so
