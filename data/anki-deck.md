@@ -48,10 +48,10 @@ Styling:
 }
 
 .map {height:80%;}
-.map img {width: 100%;}
+.map img {max-width: 100%;}
+
 .flag {height:80%;}
-.flag .img {width: 100%;}
-.flag .img img{border:1px solid black;height: 90%}
+.flag img{max-width: 100%;border:1px solid black;}
 
 #answer{height:20%; }
 ```
@@ -82,10 +82,10 @@ Styling:
 }
 
 .map {height:80%;}
-.map img {width: 100%;}
+.map img {max-width: 100%;}
+
 .flag {height:80%;}
-.flag .img {width: 100%;}
-.flag .img img{border:1px solid black;height: 90%}
+.flag img{max-width: 100%;border:1px solid black;}
 
 #answer{height:20%; }
 ```
@@ -103,7 +103,7 @@ Back Template:
 
 Front Template:
 ```
-<div class="flag"><div class="img">{{Flag}}</div></div>
+<div class="flag">{{Flag}}</div>
 ```
 
 Styling:
@@ -116,10 +116,10 @@ Styling:
 }
 
 .map {height:80%;}
-.map img {height: 100%;}
+.map img {max-width: 100%;}
+
 .flag {height:80%;}
-.flag .img {width: 100%;}
-.flag .img img{border:1px solid black;height: 90%}
+.flag img{max-width: 100%;border:1px solid black;}
 
 #answer{height:20%; }
 ```
@@ -152,10 +152,10 @@ Styling:
 }
 
 .map {height:80%;}
-.map img {height: 100%;}
+.map img {max-width: 100%;}
+
 .flag {height:80%;}
-.flag .img {width: 100%;}
-.flag .img img{border:1px solid black;height: 90%}
+.flag img{max-width: 100%;border:1px solid black;}
 
 #answer{height:20%; }
 ```
@@ -192,4 +192,9 @@ You will have to import the CSV file three times, one for each sub-deck above.
 1. Select the correct Deck (matching the note type)
 1. Fields are separated by commas
 1. Make sure the check the box "Allow HTML in fields"
-1. The table of field mapping should match the fields in the CSV as described above
+1. The table of field mapping should match the fields in the CSV as described above. 1-name, 2-code, etc. The 7th field is "Tags."
+
+Repeat the above for each deck and you should have all the cards.
+
+Make sure you copy the flag and map files into the Anki collection.media
+directory.

@@ -6,7 +6,8 @@ and flags of countries and territories of the world.
 ## Install into Anki
 
 The easiest way to get this into Anki is to open the .apkg file. This is a
-ready to go archive that will be imported directly into Anki.
+ready to go archive that will be imported directly into Anki. You can find this
+file on the [releases page of this repository](https://github.com/sumpygump/worldtour-countries/releases).
 
 ## Import into Anki
 
