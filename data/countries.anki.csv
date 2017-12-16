@@ -63,7 +63,7 @@ Dominican Republic,DO,,Santo Domingo,"<img src=""world-dominican_republic-flag.s
 Ecuador,EC,,Quito,"<img src=""world-ecuador-flag.svg"" />","<img src=""world-ecuador-map.png"" />",South_America
 Egypt,EG,,Cairo,"<img src=""world-egypt-flag.svg"" />","<img src=""world-egypt-map.png"" />",Africa
 El Salvador,SV,,San Salvador,"<img src=""world-el_salvador-flag.svg"" />","<img src=""world-el_salvador-map.png"" />",Central_America
-England,GB-ENG,Country in the UK,London,"<img src=""world-england-flag.svg"" />","<img src=""world-england-map.png"" />",Europe
+England,GB-ENG,Country in UK,London,"<img src=""world-england-flag.svg"" />","<img src=""world-england-map.png"" />",Europe
 Equatorial Guinea,GQ,,Malabo,"<img src=""world-equatorial_guinea-flag.svg"" />","<img src=""world-equatorial_guinea-map.png"" />",Africa
 Eritrea,ER,,Asmara,"<img src=""world-eritrea-flag.svg"" />","<img src=""world-eritrea-map.png"" />",Africa
 Estonia,EE,,Tallinn,"<img src=""world-estonia-flag.svg"" />","<img src=""world-estonia-map.png"" />",Europe
@@ -114,7 +114,7 @@ Kenya,KE,,Nairobi,"<img src=""world-kenya-flag.svg"" />","<img src=""world-kenya
 Kiribati,KI,,Tarawa,"<img src=""world-kiribati-flag.svg"" />","<img src=""world-kiribati-map.png"" />",Oceania
 North Korea,KP,,Pyongyang,"<img src=""world-north_korea-flag.svg"" />","<img src=""world-north_korea-map.png"" />",East_Asia
 South Korea,KR,,Seoul,"<img src=""world-south_korea-flag.svg"" />","<img src=""world-south_korea-map.png"" />",East_Asia
-Kosovo,XK,a disputed territory[9][10] and partially recognised state,Priština,"<img src=""world-kosovo-flag.svg"" />","<img src=""world-kosovo-map.png"" />",Europe
+Kosovo,XK,a disputed territory and partially recognised state,Priština,"<img src=""world-kosovo-flag.svg"" />","<img src=""world-kosovo-map.png"" />",Europe
 Kuwait,KW,,Kuwait City,"<img src=""world-kuwait-flag.svg"" />","<img src=""world-kuwait-map.png"" />",West_Asia
 Kyrgyzstan,KG,,Bishkek,"<img src=""world-kyrgyzstan-flag.svg"" />","<img src=""world-kyrgyzstan-map.png"" />",West_Asia
 Laos,LA,,Vientiane,"<img src=""world-laos-flag.svg"" />","<img src=""world-laos-map.png"" />",East_Asia
@@ -159,7 +159,7 @@ Nigeria,NG,,Abuja,"<img src=""world-nigeria-flag.svg"" />","<img src=""world-nig
 Niue,NU,self-governing state in free association with New Zealand,Alofi,"<img src=""world-niue-flag.svg"" />","<img src=""world-niue-map.png"" />",Oceania
 Norfolk Island,NF,,Kingston,"<img src=""world-norfolk_island-flag.svg"" />","<img src=""world-norfolk_island-map.png"" />",Oceania
 Northern Mariana Islands,MP,an insular area and commonwealth of the United States,Saipan,"<img src=""world-northern_mariana_islands-flag.svg"" />","<img src=""world-northern_mariana_islands-map.png"" />",Oceania
-Northern Ireland,GB-NIR,Country in the UK,Belfast,"<img src=""world-northern_ireland-flag.svg"" />","<img src=""world-northern_ireland-map.png"" />",Europe
+Northern Ireland,GB-NIR,Country in UK,Belfast,"<img src=""world-northern_ireland-flag.svg"" />","<img src=""world-northern_ireland-map.png"" />",Europe
 Norway,NO,,Oslo,"<img src=""world-norway-flag.svg"" />","<img src=""world-norway-map.png"" />",Europe
 Oman,OM,,Muscat,"<img src=""world-oman-flag.svg"" />","<img src=""world-oman-map.png"" />",West_Asia
 Pakistan,PK,,Islamabad,"<img src=""world-pakistan-flag.svg"" />","<img src=""world-pakistan-map.png"" />",West_Asia
@@ -233,7 +233,7 @@ Venezuela,VE,,Caracas,"<img src=""world-venezuela-flag.svg"" />","<img src=""wor
 Vietnam,VN,,Hanoi,"<img src=""world-vietnam-flag.svg"" />","<img src=""world-vietnam-map.png"" />",East_Asia
 "Virgin Islands, British",VG,a British Overseas Territory,Road Town,"<img src=""world-virgin_islands,_british-flag.svg"" />","<img src=""world-virgin_islands,_british-map.png"" />",Central_America
 "Virgin Islands, US",VI,,Charlotte Amalie,"<img src=""world-virgin_islands,_us-flag.svg"" />","<img src=""world-virgin_islands,_us-map.png"" />",Central_America
-Wales,GB-WLS,,Cardiff,"<img src=""world-wales-flag.svg"" />","<img src=""world-wales-map.png"" />",Europe
+Wales,GB-WLS,Country in UK,Cardiff,"<img src=""world-wales-flag.svg"" />","<img src=""world-wales-map.png"" />",Europe
 Western Sahara,EH,,El Aaiún,"<img src=""world-western_sahara-flag.svg"" />","<img src=""world-western_sahara-map.png"" />",Africa
 Yemen,YE,,Sana'a,"<img src=""world-yemen-flag.svg"" />","<img src=""world-yemen-map.png"" />",West_Asia
 Zambia,ZM,,Lusaka,"<img src=""world-zambia-flag.svg"" />","<img src=""world-zambia-map.png"" />",Africa
