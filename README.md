@@ -9,8 +9,11 @@ The easiest way to get this into Anki is to open the .apkg file. This is a
 ready to go archive that will be imported directly into Anki. You can find this
 file on the [releases page of this repository](https://github.com/sumpygump/worldtour-countries/releases).
 
+You can download the deck from ankiweb as well here: https://ankiweb.net/shared/info/596859658
+
 ## Import into Anki
 
+The instructions below are if you want to create this deck from scratch.
 If you wish to make changes and then import the updates into Anki, you can
 import the decks manually.
 
@@ -39,6 +42,10 @@ The maps are generated from a SVG file of the world, with a viewBox centered in
 the appropriate area and the countries "highlighted" appropriately. There are
 classes attached the country paths in the SVG file that can have a fill applied
 to them.
+
+First you need to have [node](https://nodejs.org/en/) installed and npm. From
+the root directory of this repository, run `npm install` to install the
+dependencies defined in package.json.
 
 From the `src` directory run the following script to generate the maps:
 
