@@ -41,19 +41,31 @@ Front Template:
 Styling:
 ```
 .card {
- font-family: arial;
- font-size: 30px;
- text-align: center;
- color: black;
+    font-family: arial;
+    font-size: 30px;
+    text-align: center;
+    color: black;
+    max-width: 1024px;
+    overflow-y: scroll;
+    position: relative;
+    height: 100%;
+    margin: 16px auto;
+    padding: 0; 
+}
+.contain {
+    margin: 16px;
+    height: 80%;
 }
 
-.map {height:80%;}
-.map img {max-width: 100%;}
+.map { max-width: 1024px; height: auto; margin: 0 auto; position: relative; }
+.map img { max-height: 100%; height: auto; display: block; margin: 0 auto; position: relative; object-fit: contain; }
 
-.flag {height:80%;}
-.flag img{max-width: 100%;border:1px solid black;}
+.flag { width: auto; height: auto; max-height: 80%; position: relative; padding: 0 20px; margin: 0 auto; }
+.flag img { height: auto; min-width: 70%; max-height: 80%; border: 1px solid black; display: block; margin: 0 auto; object-fit: contain; position: relative; }
 
-#answer{height:20%; }
+.desc { font-size: 16px; line-height: 20px; padding: 0 20px; display: block; margin-top: 16px; }
+
+#answer { height: 20%; }
 ```
 
 Back Template:
@@ -63,7 +75,7 @@ Back Template:
 <hr id=answer>
 
 {{Name}}<br />
-{{Description}}
+<span class="desc">{{Description}}</span>
 ```
 
 ### Card Type Capital R
@@ -75,19 +87,31 @@ The capital of {{Name}} is...
 Styling:
 ```
 .card {
- font-family: arial;
- font-size: 30px;
- text-align: center;
- color: black;
+    font-family: arial;
+    font-size: 30px;
+    text-align: center;
+    color: black;
+    max-width: 1024px;
+    overflow-y: scroll;
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0; 
+}
+.contain {
+    margin: 16px;
+    height: 80%;
 }
 
-.map {height:80%;}
-.map img {max-width: 100%;}
+.map { max-width: 1024px; height: auto; margin: 0 auto; position: relative; }
+.map img { max-height: 100%; height: auto; display: block; margin: 0 auto; position: relative; object-fit: contain; }
 
-.flag {height:80%;}
-.flag img{max-width: 100%;border:1px solid black;}
+.flag { width: auto; height: auto; max-height: 80%; position: relative; padding: 0 20px; margin: 0 auto; }
+.flag img { height: auto; min-width: 70%; max-height: 80%; border: 1px solid black; display: block; margin: 0 auto; object-fit: contain; position: relative; }
 
-#answer{height:20%; }
+.desc { font-size: 16px; line-height: 20px; padding: 0 20px; display: block; margin-top: 16px; }
+
+#answer { height: 20%; }
 ```
 
 Back Template:
@@ -103,25 +127,39 @@ Back Template:
 
 Front Template:
 ```
-<div class="flag">{{Flag}}</div>
+<div class="contain">
+  <div class="flag">{{Flag}}</div>
+</div>
 ```
 
 Styling:
 ```
 .card {
- font-family: arial;
- font-size: 30px;
- text-align: center;
- color: black;
+    font-family: arial;
+    font-size: 30px;
+    text-align: center;
+    color: black;
+    max-width: 1024px;
+    overflow-y: scroll;
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0; 
+}
+.contain {
+    margin: 16px;
+    height: 80%;
 }
 
-.map {height:80%;}
-.map img {max-width: 100%;}
+.map { max-width: 1024px; height: auto; margin: 0 auto; position: relative; }
+.map img { max-height: 100%; height: auto; display: block; margin: 0 auto; position: relative; object-fit: contain; }
 
-.flag {height:80%;}
-.flag img{max-width: 100%;border:1px solid black;}
+.flag { width: auto; height: auto; max-height: 80%; position: relative; padding: 0 20px; margin: 0 auto; }
+.flag img { height: auto; min-width: 70%; max-height: 80%; border: 1px solid black; display: block; margin: 0 auto; object-fit: contain; position: relative; }
 
-#answer{height:20%; }
+.desc { font-size: 16px; line-height: 20px; padding: 0 20px; display: block; margin-top: 16px; }
+
+#answer { height: 20%; }
 ```
 
 Back Template:
@@ -131,7 +169,7 @@ Back Template:
 <div id="answer">
   <hr>
   {{Name}}<br />
-  {{Description}}     
+  <span class="desc">{{Description}}</span>
 </div>
 ```
 
@@ -139,25 +177,39 @@ Back Template:
 
 Front Template:
 ```
-<div class="map">{{Map}}</div>
+<div class="contain">
+  <div class="map">{{Map}}</div>
+</div>
 ```
 
 Styling:
 ```
 .card {
- font-family: arial;
- font-size: 30px;
- text-align: center;
- color: black;
+    font-family: arial;
+    font-size: 30px;
+    text-align: center;
+    color: black;
+    max-width: 1024px;
+    overflow-y: scroll;
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0; 
+}
+.contain {
+    margin: 16px;
+    height: 80%;
 }
 
-.map {height:80%;}
-.map img {max-width: 100%;}
+.map { max-width: 1024px; height: auto; margin: 0 auto; position: relative; }
+.map img { max-height: 100%; height: auto; display: block; margin: 0 auto; position: relative; object-fit: contain; }
 
-.flag {height:80%;}
-.flag img{max-width: 100%;border:1px solid black;}
+.flag { width: auto; height: auto; max-height: 80%; position: relative; padding: 0 20px; margin: 0 auto; }
+.flag img { height: auto; min-width: 70%; max-height: 80%; border: 1px solid black; display: block; margin: 0 auto; object-fit: contain; position: relative; }
 
-#answer{height:20%; }
+.desc { font-size: 16px; line-height: 20px; padding: 0 20px; display: block; margin-top: 16px; }
+
+#answer { height: 20%; }
 ```
 
 Back Template:
@@ -167,7 +219,7 @@ Back Template:
 <div id="answer">
   <hr>
   {{Name}}<br />
-  {{Description}}     
+  <span class="desc">{{Description}}</span>
 </div>
 ```
 
